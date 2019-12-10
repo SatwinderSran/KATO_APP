@@ -1,0 +1,42 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+
+#upper_nav {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    /* Kato */
+    background: #2A8BE4;
+}
+
+.dropdown-menu a {
+    font-size: 15px;
+    text-align: center;
+    padding: 5px;
+}
+
+.logo {
+    padding-left: 50px;
+    font-size: 40px;
+    color: #fff;
+}
+
+#upper_nav h2 {
+    padding-top: 20px;
+    color: #fff;
+}
+
+.glyph-edit {
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
