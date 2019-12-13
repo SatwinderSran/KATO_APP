@@ -41,8 +41,8 @@ class Info extends Component {
      */
     setId(id){
         const uid = "";
-               fetch("http://localhost:3000/parent").then(res => res.json()).then(res => res.forEach(element => {if(element.user_id === id.parentId) this.setState({student_id: element.student_id})})).then(console.log("stuid" + this.state.student_id))
-               console.log("student state: " + this.state.student_id);
+               fetch("http://localhost:3000/parent").then(res => res.json()).then(res => res.forEach(element => {if(element.user_id === id.parentId) this.setState({student_id: element.student_id})})).then(() => this.setName())
+               
     }
 
     /**
@@ -55,7 +55,6 @@ class Info extends Component {
 
    
     componentDidMount() {
-        this.setName();
         this.setState({
             atpq:[0,3]
         })
@@ -64,7 +63,7 @@ class Info extends Component {
             fetch("http://localhost:3000/avgscore?uid="+ this.state.student_id +"&date1=2019-09-17T19:15:27.000Z&date2=2019-09-24T19:15:27.000Z").then(res=> res.json()).then(res => this.setState({scores: [0, res[0].avg/10]}));
         } else {
             this.setState({
-                studyTime: [0, 6],
+                studyTime: [0, 5],
                 scores: [0,10]
             })
         }
@@ -192,7 +191,6 @@ class Info extends Component {
 
     changeWeek5() {
       
-       console.log("name", this.state.name)
         const query1 = "?uid="+ this.state.student_id +"&date1=2019-09-17T19:15:27.000Z&date2=2019-09-24T19:15:27.000Z";
         const query2= "?uid="+ this.state.student_id +"&date1=2019-09-24T19:15:27.000Z&date2=2019-10-26T19:15:27.000Z";
         this.setState({
@@ -242,7 +240,6 @@ class Info extends Component {
      */
     render() {
       
-        //this.setName();
         
         /**
          * Declarations of chartjs' chart objects, based off state data
