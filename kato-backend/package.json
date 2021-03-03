@@ -14,7 +14,7 @@
     "knex": "^0.20.0",
     "morgan": "~1.9.1",
     "pg": "^7.12.1",
-    "pug": "2.0.0-beta11"
+    "pug": "3.0.1"
   },
   "main": "app.js",
   "devDependencies": {},
